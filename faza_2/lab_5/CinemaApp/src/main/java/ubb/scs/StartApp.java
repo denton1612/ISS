@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import ubb.scs.controller.Controller;
 import ubb.scs.controller.ControllerLogin;
 import ubb.scs.repository.HibernateRepositoryClient;
 import ubb.scs.repository.HibernateRepositorySeat;

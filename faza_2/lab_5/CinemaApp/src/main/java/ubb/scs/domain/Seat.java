@@ -22,6 +22,17 @@ public class Seat implements ubb.scs.domain.Entity<Long> {
     private int row;
     @Column(name = "col", nullable = false)
     private int col;
+    @Column(name = "price", nullable = false)
+    private int price;
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
     @ManyToOne
     @JoinColumn(name = "id_client")
     private Client client;
@@ -35,9 +46,10 @@ public class Seat implements ubb.scs.domain.Entity<Long> {
     }
 
     public Seat() {}
-    public Seat(int row, int col, Client client) {
+    public Seat(int row, int col, int price, Client client) {
         this.row = row;
         this.col = col;
+        this.price = price;
         this.client = client;
     }
 
@@ -69,7 +81,7 @@ public class Seat implements ubb.scs.domain.Entity<Long> {
 
     @Override
     public String toString() {
-        return "{ " + "row: " + row + ", col: " + col + " }";
+        return "{ " + "row: " + row + ", col: " + col + ", price: " + price + " }";
     }
 
     @Override
